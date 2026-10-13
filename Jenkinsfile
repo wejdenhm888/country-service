@@ -1,17 +1,18 @@
 pipeline {
     agent any
+    options { timeout(time: 10, unit: 'MINUTES') }
     tools {
-        maven 'M2_HOME'
+        jdk 'JDK21'
     }
     stages {
         stage('Compile code') {
             steps {
-                sh 'mvn compile'
+                sh '/mnt/c/maven/bin/mvn compile'
             }
         }
         stage('Test code') {
             steps {
-                sh 'mvn test'
+                sh '/mnt/c/maven/bin/mvn test'
             }
             post {
                 success {
@@ -21,7 +22,7 @@ pipeline {
         }
         stage('Package code') {
             steps {
-                sh 'mvn package'
+                sh '/mnt/c/maven/bin/mvn package'
             }
         }
     }
