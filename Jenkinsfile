@@ -1,11 +1,9 @@
 pipeline {
     agent any
     tools {
-        maven 'M2_HOME'
+        maven 'mymaven'
     }
     stages {
-        
-        }
         stage('Compile code') {
             steps {
                 sh 'mvn compile'
