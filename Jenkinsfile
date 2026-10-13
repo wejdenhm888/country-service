@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                git branch: 'main', url: 'https://github.com/FatmaDaldoul/Country-service.git'
+                git branch: 'main', url: 'https://github.com/FatmaDaldoul/country-service.git'
             }
         }
         stage('Compile code') {
