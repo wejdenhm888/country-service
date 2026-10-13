@@ -4,10 +4,7 @@ pipeline {
         maven 'M2_HOME'
     }
     stages {
-        stage('Checkout code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/FatmaDaldoul/country-service.git'
-            }
+        
         }
         stage('Compile code') {
             steps {
