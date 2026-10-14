@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven 'mymaven'
+        maven 'M2_HOME'
         jdk 'JDK21'
     }
     stages {
         stage('Checkout code') {
             steps {
-                git branch: 'master', url: 'https://github.com/Jamina-ENSI/Country-service.git'
+                git branch: 'master', url: 'https://github.com/wejdenhm888/country-service'
             }
         }
         stage('Compile, Test & JaCoCo Report') {
